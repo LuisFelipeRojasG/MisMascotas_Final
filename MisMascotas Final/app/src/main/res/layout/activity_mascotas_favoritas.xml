@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MascotasFavoritas"
+    android:orientation="vertical">
+
+    <!-- Contenedor de la barra principal y el tabLayout  -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/actionBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="429dp"
+            android:elevation="@dimen/elevation_bar"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="@string/nombre_favoritosBar"
+                android:paddingTop="@dimen/top_titulo_bar"
+                android:textStyle="bold"
+                android:textSize="@dimen/nombre_mascota"
+                android:textColor="#fff"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Contenedor donde iran los fragmentos -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerFavoritas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBar"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
